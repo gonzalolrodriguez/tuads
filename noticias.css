@@ -1,0 +1,137 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a modern font */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #c4f4be, #9adaf5, #c075be);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s infinite;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Main content styles */
+main {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero section styles */
+.introduccion {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    width: 100%;
+    padding: 100px 0;
+    color: #444242;
+}
+
+.introduccion h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Cards section styles */
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo con efecto glass */
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde */
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease-in-out; /* Efecto de transformación al pasar el ratón */
+    text-align: justify;
+
+}
+
+
+.card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.h1, .introduccion {
+    font-size: 1.1em;
+    color:rgb(80, 80, 81);
+}
