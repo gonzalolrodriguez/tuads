@@ -43,12 +43,57 @@ nav ul {
 }
 
 nav li {
-    margin: 0 20px;
+    margin: 0 10px; /* Reduced margin for smaller screens */
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive adjustments for larger screens */
+@media screen and (min-width: 768px) {
+    /* Increase header and nav font sizes and spacing */
+    header {
+        padding: 20px 0;
+        font-size: 24px;
+    }
+
+    nav li {
+        margin: 0 20px;
+    }
+
+    /* Adjust main content padding */
+    main {
+        padding: 40px;
+    }
+}
+
+/* Responsive adjustments for even larger screens */
+@media screen and (min-width: 1024px) {
+    /* Further increase header and nav font sizes and spacing */
+    header {
+        padding: 30px 0;
+        font-size: 32px;
+    }
+
+    nav li {
+        margin: 0 30px;
+    }
+
+    /* Further adjust main content padding */
+    main {
+        padding: 60px;
+    }
 }
 
 /* Main content styles */
@@ -65,20 +110,21 @@ main {
     
 }
 
+/* Default styles for mobile devices */
+
 .contact-form {
     background-color: #fff;
     border-radius: 1.8em;
-    box-shadow: 40px 48px 54px rgba(0, 0, 0, 0.1);
-    padding: 5em;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
     text-align: left;
-    width: 80%;
     max-width: 400px;
+    margin: 0 auto;
     opacity: 0.9;
-    backdrop-filter: (10px);
 }
 
 h2 {
-    font-size: 2empx;
+    font-size: 24px; /* Increase font size for mobile */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -111,13 +157,35 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    
-
 }
+
+/* Responsive styles for larger screens */
+@media screen and (min-width: 768px) {
+    .contact-form {
+        padding: 3em; /* Increase padding for larger screens */
+    }
+
+    h2 {
+        font-size: 32px; /* Further increase font size for larger screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 18px; /* Increase font size for larger screens */
+    }
+
+    button {
+        padding: 12px 24px; /* Increase padding for larger screens */
+        font-size: 18px; /* Increase font size for larger screens */
+    }
+}
+
 
 button:hover {
     background-color: #0056b3;
 }
+
 
 /* Footer styles */
 footer {
@@ -126,3 +194,18 @@ footer {
     background-color: #333;
     color: #fff;
 }
+
+/* Responsive footer styles for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Additional responsive styles for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    footer {
+        font-size: 14px;
+    }
+}
+

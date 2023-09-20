@@ -15,19 +15,21 @@ body {
     background-size: 200% 200%;
     animation: gradientAnimation 10s infinite;
 }
+
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-/* Header styles */
 header {
     background-color: #333;
     color: #fff;
@@ -43,7 +45,8 @@ nav ul {
 }
 
 nav li {
-    margin: 0 20px;
+    margin: 0 10px;
+    /* Reduced margin for smaller screens */
 }
 
 nav a {
@@ -53,7 +56,55 @@ nav a {
 
 /* Main content styles */
 main {
-    flex-grow: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive adjustments for larger screens */
+@media screen and (min-width: 768px) {
+
+    /* Increase header and nav font sizes and spacing */
+    header {
+        padding: 20px 0;
+        font-size: 24px;
+    }
+
+    nav li {
+        margin: 0 20px;
+    }
+
+    /* Adjust main content padding */
+    main {
+        padding: 40px;
+    }
+}
+
+/* Responsive adjustments for even larger screens */
+@media screen and (min-width: 1024px) {
+
+    /* Further increase header and nav font sizes and spacing */
+    header {
+        padding: 30px 0;
+        font-size: 32px;
+    }
+
+    nav li {
+        margin: 0 30px;
+    }
+
+    /* Further adjust main content padding */
+    main {
+        padding: 60px;
+    }
+}
+
+/* Main content styles */
+main {
+    flex-grow: 1;
+    /* Ocupa el espacio restante */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,15 +150,20 @@ main {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo con efecto glass */
-    backdrop-filter: blur(10px); /* Efecto de vidrio */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo con efecto glass */
+    backdrop-filter: blur(10px);
+    /* Efecto de vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Borde */
     border-radius: 8px;
     margin: 20px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: transform 0.3s ease-in-out; /* Efecto de transformación al pasar el ratón */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    transition: transform 0.3s ease-in-out;
+    /* Efecto de transformación al pasar el ratón */
 }
 
 .card img {
@@ -127,10 +183,12 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el ratón */
 }
 
 
+/* Footer styles */
 /* Footer styles */
 footer {
     text-align: center;
@@ -139,7 +197,23 @@ footer {
     color: #fff;
 }
 
-.h1, .introduccion {
+/* Responsive footer styles for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Additional responsive styles for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    footer {
+        font-size: 14px;
+    }
+}
+
+
+.h1,
+.introduccion {
     font-size: 1.1em;
-    color:rgb(80, 80, 81);
+    color: rgb(80, 80, 81);
 }
